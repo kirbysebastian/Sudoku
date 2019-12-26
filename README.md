@@ -1,2 +1,2 @@
 # Sudoku
-A Python language Sudoku game.
+A Python language non-GUI Sudoku game.
