@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.7"
+
+script:
+  - pytest
+
+notifications:
+  email: kirbypaolo.sebastian@gmail.com
+
