@@ -16,7 +16,7 @@ This project will be based on Peter Norvig's approach of [Sudoku](https://norvig
 - UNIT -> collection of 9 squares (row, column, and box)
 - PEERS -> a square that share a unit
 
-[](https://github.com/kirbysebastian/Sudoku/blob/master/img/unit_vs_peer.png)
+[](https://raw.githubusercontent.com/kirbysebastian/Sudoku/master/img/unit_vs_peer.png)
 
 - Every square like 'C2', in the above image, have a total units of 3 and 20 peers.
 - Unit 1 -> A2, B2, C2, D2, E2, F2, G2, H2, I2 (column 2 along with C2)
