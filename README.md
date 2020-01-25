@@ -18,11 +18,11 @@ This project will be based on Peter Norvig's approach of [Sudoku](https://norvig
 
 *image here*
 
-Every square like 'C2', in the above image, have a total units of 3 and 20 peers.
-Unit 1 -> A2, B2, C2, D2, E2, F2, G2, H2, I2 (column 2 along with C2)
-Unit 2 -> C1, C2, C3, C4, C5, C6, C7, C8, C9 (row C along with C2)
-Unit 3 -> A1, A2, A3, B1, B2, B3, C1, C2, C3 (first box along with C2)
-Peers  -> A1, A2, A3, B1, B2, B3, C1, C3, C4, C5, C6, C7, C8, C9, D2, E2, F2, G2, H2, I2
+- Every square like 'C2', in the above image, have a total units of 3 and 20 peers.
+- Unit 1 -> A2, B2, C2, D2, E2, F2, G2, H2, I2 (column 2 along with C2)
+- Unit 2 -> C1, C2, C3, C4, C5, C6, C7, C8, C9 (row C along with C2)
+- Unit 3 -> A1, A2, A3, B1, B2, B3, C1, C2, C3 (first box along with C2)
+- Peers  -> A1, A2, A3, B1, B2, B3, C1, C3, C4, C5, C6, C7, C8, C9, D2, E2, F2, G2, H2, I2
 
 ## TODO LIST
 - Create a game loader to load an existing Sudoku game.
