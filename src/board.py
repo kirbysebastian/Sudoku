@@ -41,6 +41,7 @@ class Board:
         # Load existing sudoku puzzle to board
         self.grid = puzzle
         self.board = [[data if data != '0' else ' ' for data in self.grid[i*9:(i*9)+9]] for i in range(9)]
+        print(self.board)
 
 
 #b = Board()

@@ -19,11 +19,13 @@ class Nolvig(Solver):
         self.squares = [a+b for a in 'ABCDEFGHI' for b in '123456789']
         super().__init__()
 
+    def solve(self, grid):
+        done = self.search(self.parse_grid(grid))
+        #self.display(done)
+        return done
+
     def cross(self, A, B):
         return [a+b for a in A for b in B]
-
-    def solve(self, grid):
-        return self.search(self.parse_grid(grid))
 
     def parse_grid(self, grid):
         """Convert grid to a dict of possible values, {square: digits}, or
@@ -38,6 +40,7 @@ class Nolvig(Solver):
     def grid_values(self, grid):
         #Convert grid into a dict of {square: char} with '0' or '.' for empties.
         chars = [c for c in grid if c in self.digits or c in '0.']
+        print(chars)
         assert len(chars) == 81
         return dict(zip(self.squares, chars))
 
@@ -91,5 +94,13 @@ class Nolvig(Solver):
                     return False
         return values
 
-s = Nolvig()
+    def display(self, values):
+        "Display these values as a 2-D grid."
+        width = 1+max(len(values[s]) for s in self.squares)
+        line = '+'.join(['-'*(width*3)]*3)
+        for r in self.row:
+            print(''.join(values[r+c].center(width)+('|' if c in '36' else '')
+                          for c in self.col))
+            if r in 'CF': print(line)
+
 
