@@ -3,7 +3,8 @@
 from src.sudoku import Sudoku
 
 def main():
-    pass
+    game = Sudoku()
+    game.start()
 
 if __name__ == '__main__':
    main()

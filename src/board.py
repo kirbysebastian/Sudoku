@@ -39,10 +39,12 @@ class Board:
 
     def load(self, puzzle: str):
         # Load existing sudoku puzzle to board
-        self.board = [[data if data != '0' else ' ' for data in puzzle[i*9:(i*9)+9]] for i in range(9)]
+        self.grid = puzzle
+        self.board = [[data if data != '0' else ' ' for data in self.grid[i*9:(i*9)+9]] for i in range(9)]
 
-b = Board()
+
+#b = Board()
 #b.load('005910308009403060027500100030000201000820007006007004000080000640150700890000420')
-b.load('400000805030000000000700000020000060000080400000010000000603070500200000104000000')
-print(b)
+#b.load('400000805030000000000700000020000060000080400000010000000603070500200000104000000')
+#print(b)
 
