@@ -1,5 +1,6 @@
 #!/usr/bin/python3.7
 
+import sys
 from src.sudoku import Sudoku
 
 def main():

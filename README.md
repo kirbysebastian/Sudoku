@@ -25,7 +25,8 @@ This project will be based on Peter Norvig's approach of [Sudoku](https://norvig
 * Peers  -> A1, A2, A3, B1, B2, B3, C1, C3, C4, C5, C6, C7, C8, C9, D2, E2, F2, G2, H2, I2
 
 ## TODO LIST
-- Create a game loader to load an existing Sudoku game.
+- ~~Create a game loader to load an existing Sudoku game.~~
+- System arg for loading existing puzzle
 - Create a playable game
 - Create tests for modules
 - Integrate Travis-CI
