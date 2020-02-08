@@ -1,8 +1,6 @@
-# Sudoku
+# Sudoku (Still ongoing...)
 A Python language non-GUI Sudoku game.
 This project will be based on Peter Norvig's approach of [Sudoku](https://norvig.com/sudoku.html)
-
-*Still an ongoing project. Stay tuned. :)*
 
 ## Rules
  - A grid of 9x9 square is initially filled with some digits represented from 1-9 and left with some blank spaces.
