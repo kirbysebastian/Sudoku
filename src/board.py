@@ -22,30 +22,28 @@ class Board:
 
     def make_printable(self):
         table_str = '   A  B  C   D  E  F   G  H  I' + '\n\n'
-        for c, row in enumerate(self.board):
-            row_text = '{} '.format(c+1)
-            for i, d in enumerate(row):
-                if d == ' ':
-                    d = '.'
+        for i in range(9):
+            row_text = '{} '.format(i+1)
+            for j in range(9):
+                col_index = j + (i*9)
+                char_d = self.grid[col_index]
+                if self.grid[col_index] == '0':
+                    char_d = '.'
 
-                row_text = row_text + ' ' + d + ' '
-                if (i+1)%3 == 0 and (i+1) != 9:
+                row_text = row_text + ' ' + char_d + ' '
+                if (j+1)%3 == 0 and (j+1) != 9:
                     row_text = row_text + '|'
-            table_str += row_text + '\n'
-            if (c+1)%3 == 0 and (c+1) != 9:
-                table_str += '  ---------|---------|---------' + '\n'
-        return table_str
 
+            table_str = table_str + row_text + '\n'
+            if (i+1)%3 == 0 and (i+1) != 9:
+                table_str += '  ---------|---------|---------' + '\n'
+
+        return table_str
 
     def load(self, puzzle: str):
         # Load existing sudoku puzzle to board
         self.grid = puzzle
         self.board = [[data if data != '0' else ' ' for data in self.grid[i*9:(i*9)+9]] for i in range(9)]
-        print(self.board)
+        #print(self.board)
 
-
-#b = Board()
-#b.load('005910308009403060027500100030000201000820007006007004000080000640150700890000420')
-#b.load('400000805030000000000700000020000060000080400000010000000603070500200000104000000')
-#print(b)
 

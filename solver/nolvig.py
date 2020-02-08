@@ -21,8 +21,8 @@ class Nolvig(Solver):
 
     def solve(self, grid):
         done = self.search(self.parse_grid(grid))
-        #self.display(done)
-        return done
+        grid =  ''.join([d for d in list(done.values())])
+        return grid
 
     def cross(self, A, B):
         return [a+b for a in A for b in B]
@@ -40,7 +40,7 @@ class Nolvig(Solver):
     def grid_values(self, grid):
         #Convert grid into a dict of {square: char} with '0' or '.' for empties.
         chars = [c for c in grid if c in self.digits or c in '0.']
-        print(chars)
+        #print(chars)
         assert len(chars) == 81
         return dict(zip(self.squares, chars))
 
